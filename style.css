@@ -1,0 +1,115 @@
+/* ===== PALETA: noite de Paris ===== */
+:root{--nuit:#0a1230;--tinta:#121c45;--carmim:#e5112b;--ouro:#f0c860;--gelo:#eef2ff;--nevoa:#8d9ac7}
+*{box-sizing:border-box;margin:0;padding:0}
+[hidden]{display:none!important}
+body{font-family:'Manrope',system-ui,sans-serif;font-weight:500;color:var(--gelo);background:var(--nuit);min-height:100vh;overflow-x:hidden}
+/* camisa 10 ao fundo */
+body::before{content:"10";position:fixed;right:-.05em;bottom:-.2em;font:clamp(10rem,45vw,26rem)/1 'Anton',Impact,sans-serif;color:var(--gelo);opacity:.04;pointer-events:none}
+:focus-visible{outline:3px solid var(--ouro);outline-offset:3px}
+
+/* ===== TIPOGRAFIA ===== */
+h1,h2,.vs,.coins{font-family:'Anton',Impact,'Arial Narrow',sans-serif;font-weight:400;text-transform:uppercase;letter-spacing:.02em}
+h1{font-size:clamp(3.4rem,16vw,7rem);line-height:.9;text-align:center;text-shadow:.05em .05em 0 var(--carmim)}
+h2{font-size:1.8rem}
+.sub{color:var(--nevoa);text-align:center;max-width:38ch}
+
+/* ===== TELAS ===== */
+.screen{display:none;flex-direction:column;align-items:center;gap:16px;max-width:1000px;margin:0 auto;padding:20px 16px 40px;min-height:100vh;position:relative}
+.screen.on{display:flex}
+#menu{justify-content:center}
+.menu{display:grid;gap:12px;width:min(420px,100%);margin-top:8px}
+.bar{display:flex;flex-wrap:wrap;gap:12px;align-items:center;justify-content:center;width:100%}
+.hud{display:flex;flex-wrap:wrap;gap:8px;justify-content:center}
+.pill{background:var(--tinta);border:1px solid #ffffff22;border-radius:99px;padding:.45em 1em;font-weight:800}
+.panel{display:flex;flex-direction:column;align-items:center;gap:12px;background:var(--tinta);border-radius:20px;padding:24px;width:min(420px,100%)}
+.panel .btn{width:100%}
+
+/* ===== BOTÕES (tácteis, com "borda" de baixo) ===== */
+.btn{font:800 1rem 'Manrope',system-ui,sans-serif;color:var(--nuit);background:var(--ouro);border:0;border-radius:12px;padding:.95em 1.3em;cursor:pointer;box-shadow:0 4px 0 #8a6d1f;transition:transform .08s,box-shadow .08s,filter .2s}
+.btn:hover:not(:disabled){filter:brightness(1.1)}
+.btn:active:not(:disabled){transform:translateY(3px);box-shadow:0 1px 0 #8a6d1f}
+.btn:disabled{opacity:.35;cursor:not-allowed}
+.btn.red{background:var(--carmim);color:#fff;box-shadow:0 4px 0 #7a0a18}
+.btn.red:active:not(:disabled){box-shadow:0 1px 0 #7a0a18}
+.btn.ghost{background:transparent;color:var(--gelo);border:2px solid #ffffff33;box-shadow:none}
+.btn.ghost:active:not(:disabled){box-shadow:none}
+.menu .btn{font-size:1.1rem;padding:1.15em 1.3em;text-align:left}
+.actions .btn{flex:1 1 220px}
+
+/* ===== MOEDAS ===== */
+.coins{font-size:2rem;color:var(--ouro);padding:.1em .8em;display:flex;align-items:center;gap:.4em}
+.coin{display:inline-grid;place-items:center;width:1.4em;height:1.4em;border-radius:50%;background:radial-gradient(circle at 35% 30%,#fff3b0,var(--ouro) 45%,#b8860b);color:#6b4e00;font:800 .8rem/1 'Manrope',sans-serif;box-shadow:inset 0 -2px 3px #0005}
+.coins .coin{font-size:1.1rem}
+.bump{animation:bump .3s}
+@keyframes bump{50%{transform:scale(1.15)}}
+
+/* ===== GRIDS ===== */
+.grid{display:grid;grid-template-columns:repeat(auto-fit,var(--w));gap:12px;justify-content:center;width:100%}
+#memGame{display:flex;flex-direction:column;align-items:center;gap:14px;width:100%}
+#memGrid{grid-template-columns:repeat(4,var(--w));--w:min(21vw,150px)}
+#gStage{--w:min(62vw,260px);max-width:780px}
+#idxGrid{--w:min(40vw,200px)}
+
+/* ===== CARTA 3D: perspectiva + preserve-3d + backface-visibility ===== */
+.flip{width:var(--w,150px);aspect-ratio:5/7;font-size:calc(var(--w,150px)/10);perspective:900px;position:relative;cursor:pointer}
+.inner{position:absolute;inset:0;transform-style:preserve-3d;transition:transform .8s cubic-bezier(.2,.8,.2,1)}
+.flip.on .inner{transform:rotateY(180deg)}
+.face{position:absolute;inset:0;display:flex;flex-direction:column;overflow:hidden;border-radius:.9em;border:.18em solid var(--rc,#ffffff40);backface-visibility:hidden;-webkit-backface-visibility:hidden;box-shadow:0 .5em 1.2em #0008}
+.back{align-items:center;justify-content:center;font:400 4em/.85 'Anton',Impact,sans-serif;color:var(--ouro);background:repeating-linear-gradient(135deg,#17255f 0 .5em,#0f1a47 .5em 1em)}
+.back small{font-size:.55em;color:var(--carmim)}
+.front{transform:rotateY(180deg);background:var(--tinta)}
+
+/* ===== FRENTE DA CARTA: foto grande + over pequeno no canto ===== */
+.top{position:absolute;top:.7em;left:.7em;z-index:3;display:flex;flex-direction:column;align-items:center;gap:.05em;padding:.12em .35em .18em;border:.1em solid var(--rc);border-radius:.45em;background:#0a1230b3;line-height:1}
+.top b{font:400 1.5em/1 'Anton',Impact,sans-serif;color:var(--rc)}
+.top small{font-size:.4em;font-weight:800;letter-spacing:.08em;color:var(--nevoa)}
+.art{flex:1;margin:.5em .5em 0;border-radius:.6em;background:linear-gradient(135deg,var(--a),var(--b));display:grid;place-items:center;position:relative;overflow:hidden}
+.art::after{content:"";position:absolute;inset:auto 0 0;height:32%;background:linear-gradient(transparent,#000a)}
+.art i{font:400 8em/1 'Anton',Impact,sans-serif;color:#fff;text-shadow:0 .06em .15em #0009}
+.art img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.club{position:absolute;z-index:1;left:.6em;bottom:.5em;font-size:.7em;font-weight:800;color:#fff;text-shadow:0 1px 3px #000}
+.info{padding:.3em .6em .55em;text-align:center}
+.info strong{display:block;font-size:.85em;line-height:1.15}
+.info em{font-style:normal;font-size:.72em;font-weight:800;color:var(--rc)}
+.badge{position:absolute;top:.5em;right:.5em;z-index:2;background:var(--carmim);color:#fff;font-size:.8em;font-weight:800;padding:.2em .6em;border-radius:99px}
+
+/* ===== RARIDADES ===== */
+.comum{--rc:#93a3c9}
+.raro{--rc:#00aaff;box-shadow:0 0 1em #00aaff55}
+.epico{--rc:#7300ff;box-shadow:0 0 1.4em #7300ff88}
+.lendario{--rc:var(--ouro);box-shadow:0 0 1.8em #ffe100}
+.lendario::after{content:"";position:absolute;inset:0;background:linear-gradient(115deg,transparent 35%,#ffffff55 50%,transparent 65%);transform:translateX(-100%);animation:shine 2.6s infinite}
+@keyframes shine{60%,100%{transform:translateX(100%)}}
+.mitica{--rc:#f00000;box-shadow:0 0 2em #ff0000;animation:pulso 2s ease-in-out infinite}
+.mitica::after{content:"";position:absolute;inset:0;background:linear-gradient(115deg,transparent 35%,#ff9fc477 50%,transparent 65%);transform:translateX(-100%);animation:shine 1.8s infinite}
+@keyframes pulso{50%{box-shadow:0 0 2.8em #ff3d7ff2}}
+.secreta{--rc:#00fff2;box-shadow:0 0 2em #00fff2,0 0 .6em #c77dffaa}
+.secreta::after{content:"";position:absolute;inset:0;pointer-events:none;opacity:.3;background:linear-gradient(120deg,#ff5f6d,#ffc371,#7dffe3,#6a8dff,#c77dff,#ff5f6d);background-size:300% 300%;animation:holo 4s linear infinite}
+@keyframes holo{to{background-position:150% 0}}
+
+/* ===== ESTADOS ===== */
+.ok{animation:pop .45s}
+@keyframes pop{40%{transform:scale(1.08)}}
+.ok .front{border-color:#3ddc84}
+.wait{animation:shake .35s 3}
+@keyframes shake{25%{transform:rotate(-4deg)}75%{transform:rotate(4deg)}}
+.lock{opacity:.4;filter:grayscale(1);cursor:default}
+
+/* ===== BATALHA ===== */
+.duel{display:flex;align-items:center;justify-content:center;gap:2vw;width:100%;--w:min(33vw,210px)}
+.slot{display:flex;flex-direction:column;align-items:center;gap:8px;padding:6px;border-radius:18px;border:2px solid transparent;font-weight:800}
+.slot.turn{border-color:var(--ouro)}
+.place{width:var(--w);aspect-ratio:5/7;border-radius:14px;border:2px dashed #ffffff30}
+.vs{font-size:2rem;color:var(--carmim)}
+
+/* ===== EFEITO DE VITÓRIA ===== */
+.win{position:fixed;inset:0;z-index:60;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;overflow:hidden;pointer-events:none;background:radial-gradient(circle,#0a1230e6 0,#0a123000 72%);animation:winOut .6s 3.6s forwards}
+.win h2{font-size:clamp(3.4rem,18vw,8rem);line-height:.9;text-align:center;color:var(--ouro);text-shadow:.05em .05em 0 var(--carmim),0 0 .5em #f0c860aa;animation:winIn .7s cubic-bezier(.2,1.4,.4,1) both}
+.win p{font-weight:800;font-size:1.2rem;text-align:center;animation:winIn .7s .2s cubic-bezier(.2,1.4,.4,1) both}
+.win i{position:absolute;top:-5vh;width:.6rem;height:1rem;background:var(--c);animation:confete var(--t) var(--d) linear both}
+@keyframes winIn{from{transform:scale(.2);opacity:0}}
+@keyframes winOut{to{opacity:0}}
+@keyframes confete{from{transform:translateY(0) rotate(var(--r))}to{transform:translateY(112vh) rotate(calc(var(--r) + 720deg))}}
+
+@media (max-width:520px){h2{font-size:1.4rem}.menu .btn{font-size:1rem}}
+@media (prefers-reduced-motion:reduce){*,::after{animation:none!important;transition-duration:.01ms!important}}
