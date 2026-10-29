@@ -39,7 +39,7 @@ const FOTOS={
    Para usar os seus: crie a pasta "audio" ao lado do index.html, salve os arquivos
    (mp3, wav ou ogg) e escreva o caminho abaixo. Deixe '' para usar o som padrão. */
 const AUDIO={
-  musica:'',   // música de fundo (toca em loop), ex.: 'audio/musica.mp3'
+  musica:'Joy Crookes - Feet Don't Fail Me Now (Lyrics) - Dan Music.mp3',   // música de fundo (toca em loop), ex.: 'audio/musica.mp3'
   click:'',    // botões e menu
   virar:'',    // carta virando
   acerto:'',   // par certo / rodada ganha
