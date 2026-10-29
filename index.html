@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Adulto Ney — Cartas</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Manrope:wght@500;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- MENU -->
+<main id="menu" class="screen on">
+  <h1>Adulto Ney</h1>
+  <p class="sub">Vire as cartas, gire a roleta e complete a coleção.</p>
+  <nav class="menu">
+    <button class="btn ghost" data-go="memoria">🧩 JOGO DA MEMÓRIA</button>
+    <button class="btn red" data-go="batalha">⚔️ BATALHA 1V1 LOCAL</button>
+    <button class="btn" data-go="giro">🎰 GIRO OUSADO</button>
+    <button class="btn ghost" data-go="colecao">📖 INDEX (Coleção)</button>
+  </nav>
+</main>
+
+<!-- 1. JOGO DA MEMÓRIA -->
+<section id="memoria" class="screen">
+  <header class="bar"><button class="btn ghost" data-go="menu">Voltar</button><h2>Jogo da memória</h2></header>
+  <div id="memSetup" class="panel">
+    <p id="memRes" class="sub"></p>
+    <button class="btn" data-mem="tempo">⏱️ Contra o Tempo</button>
+    <button class="btn red" data-mem="vidas">❤️ Ousadia e Alegria</button>
+    <p class="sub">Acertos seguidos multiplicam os pontos, até x5.</p>
+  </div>
+  <div id="memGame" hidden>
+    <div class="hud"><span class="pill" id="hA"></span><span class="pill" id="hB"></span><span class="pill" id="hC"></span></div>
+    <div id="memGrid" class="grid"></div>
+  </div>
+</section>
+
+<!-- 2. BATALHA 1V1 -->
+<section id="batalha" class="screen">
+  <header class="bar"><button class="btn ghost" data-go="menu">Voltar</button><h2>Batalha 1v1</h2></header>
+  <div class="hud"><span class="pill" id="bRound"></span><span class="pill" id="bScore"></span></div>
+  <p id="bMsg" class="sub"></p>
+  <div class="duel">
+    <div class="slot" id="s0"><b>Jogador 1</b><div class="place"></div></div>
+    <span class="vs">VS</span>
+    <div class="slot" id="s1"><b>Jogador 2</b><div class="place"></div></div>
+  </div>
+  <button id="bDraw" class="btn">Virar carta</button>
+</section>
+
+<!-- 3. GIRO OUSADO -->
+<section id="giro" class="screen">
+  <header class="bar"><button class="btn ghost" data-go="menu">Voltar</button><h2>Giro Ousado</h2></header>
+  <div class="pill coins"><span class="coin">$</span> <span id="saldo">0</span></div>
+  <div class="bar actions">
+    <button id="farm" class="btn ghost"><span class="coin">$</span> Farmar Moedas (+100)</button>
+    <button id="g1" class="btn">🎰 Giro Simples (100 moedas)</button>
+    <button id="g10" class="btn red">🎁 Giro 10x (1000 moedas)</button>
+  </div>
+  <p id="taxas" class="sub"></p>
+  <div id="gStage" class="grid"></div>
+</section>
+
+<!-- 4. INDEX / COLEÇÃO -->
+<section id="colecao" class="screen">
+  <header class="bar"><button class="btn ghost" data-go="menu">Voltar</button><h2>Index</h2></header>
+  <p id="prog" class="sub"></p>
+  <div id="idxGrid" class="grid"></div>
+  <button id="reset" class="btn ghost">Resetar progresso</button>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>
