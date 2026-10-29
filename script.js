@@ -11,7 +11,7 @@ const FOTOS={
   hilal:'https://conteudo.imguol.com.br/c/esporte/eb/2024/11/04/neymar-se-lamenta-apos-sentir-lesao-durante-jogo-entre-al-hilal-e-esteghlal-pela-champions-league-da-asia-1730750876946_v2_3x4.jpg',         // Neymar Al-Hilal
   olimp16:'https://i.pinimg.com/736x/f6/ba/ff/f6baffa844703abb3acea2c944dbcdba.jpg',       // Neymar Olimpíadas 2016
   santos11:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSXFEUoWZBKaODjY_mODmlNgHdyYmL7kX-jSvpPKCD8gGHuQovj2rak7zb1&s=10',      // Neymar Santos 2011
-  barca16:'https://i.pinimg.com/736x/25/74/ac/2574ac4b4cb6545f8b609420e1675d9f.jpg',       // Neymar Barcelona 2016
+  barca16:'https://newr7-r7-prod.web.arc-cdn.net/resizer/v2/Y5SZSYXRSVP7TCUGBOSFXRTV5Y.jpg?auth=8868306366de27426626a5474d19af2bed8eb88c2f899c0fe9cc7f6a5c72cec1&width=640&height=640',       // Neymar Barcelona 2016
   psg18:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRamTR2QBHke7CF5GtviGMWkQxCFnJvS_oLHrH2lsneivGD5MM-umoDOGE&s=10',         // Neymar PSG 2017
   selecao21:'https://scontent-gru1-2.xx.fbcdn.net/v/t39.30808-6/685430789_122153588132991469_2462513944583657235_n.jpg?stp=dst-jpg_tt6&cstp=mx735x920&ctp=s640x640&_nc_cat=103&ccb=1-7&_nc_sid=aa7b47&_nc_ohc=3VL2q91iTYUQ7kNvwECan5v&_nc_oc=AdqiNgMVbq_J2unJbl-F_KrJRzK56Utqx3Q1y5dc3A3KUIMkX3h-CXeUG0WcIbElKZs&_nc_zt=23&_nc_ht=scontent-gru1-2.xx&_nc_gid=BiL_LXP-GPA5QCf1h4wr8w&_nc_ss=7b289&oh=00_AQR_-3WqRH1b2q7zD-i835MEGZ4RsqHyukG-Pj1Xw5bYLQ&oe=6AE84AC3',     // Neymar Seleção 2021
   barca13:'https://ogimg.infoglobo.com.br/in/11042463-2d9-131/FT1086A/2013-671644574-20131211192302212afp.jpg_20131211.jpg',       // Neymar Barcelona 2013
@@ -22,10 +22,10 @@ const FOTOS={
   santos09:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThZEOnuTk4mA9sEu0iEfRf-__U0LTT1pV9WBdoYmdVB-QA6hvHbPm5d9Ww&s=10',      // Neymar Santos 2009
   santos12:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRNNrrJpycLvcn_dGTeYfbGrn7QID2Vf-4Gkns7kUgtuFqfmyt8ngqDZVMo&s=10',      // Neymar Santos 2012
   santos13:'https://i.pinimg.com/736x/78/56/26/785626672e67236c0cd9006fdddea81a.jpg',      // Neymar Santos 2013
-  santos26:'https://assets.goal.com/images/v3/imago-sport-1084744630/crop/MM5DGMBYHA5DCNZTG45G433XMU5DENJRHIYA====/imago-image.jpeg',      // Neymar Santos 2025
+  santos26:'https://santistas.net/wp-content/uploads/2026/10/55597440872_ec89253232_k-e1792533175700-800x450.jpg',      // Neymar Santos 2025
   selecao18:'https://s2-ge.glbimg.com/4V2AkCHsVFDw-1kz7DLxCXp0VPk=/0x0:2363x1616/924x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_bc8228b6673f488aa253bbcb03c80ec5/internal_photos/bs/2018/Q/u/cFxwuSTkaGMXI4I4pWsw/2018-07-02t151011z-1088169977-rc1d923d5a00-rtrmadp-3-soccer-worldcup-bra-mex.jpg',     // Neymar Seleção 2018
   selecao13:'https://scontent-gru2-2.xx.fbcdn.net/v/t1.6435-9/95328830_3115863278639313_2369375011564683264_n.jpg?stp=dst-jpg_tt6&cstp=mx1080x1344&ctp=s640x640&_nc_cat=102&ccb=1-7&_nc_sid=127cfc&_nc_ohc=NCS9tm6vg5AQ7kNvwFgo7tf&_nc_oc=AdrrosfDn1nHeS7buSsTu0bCxaSdLMWt8cO_0Cvs3OdcsDhgUm0nGmD8-tbAgk8VnEU&_nc_zt=23&_nc_ht=scontent-gru2-2.xx&_nc_gid=RdXOTCd4G_FPIMZh9sM09Q&_nc_ss=7b289&oh=00_AQREpvuEIu6KfT-A2SE6itb2ttNSaLJ7PinI-4DhKWYSqA&oe=6B09F319',     // Neymar Seleção 2013
-  psg2020:'hhttps://itaquiraiemfoco.com.br/hf-conteudo/uploads/posts/2020/04/14013_neymar-kobe-1-jpg.jpg',         // Neymar PSG 2020
+  barcaneyemessi:'https://a3.espncdn.com/combiner/i?img=%2Fphoto%2F2019%2F0619%2Fr558627_1296x729_16%2D9.jpg',         // Neymar e Messi
   psg21:'https://conteudo.imguol.com.br/c/esporte/fe/2021/04/13/neymar-durante-psg-x-bayern-pela-liga-dos-campeoes-1618343501475_v2_3x4.jpg',         // Neymar PSG 2021
   psg23:'https://conteudo.imguol.com.br/c/esporte/b7/2022/08/13/neymar-do-psg-comemora-gol-marcado-diante-do-rayo-vallecano-1660420189462_v2_3x4.jpg',         // Neymar PSG 2023
   camisa10:'https://conteudo.imguol.com.br/c/esporte/70/2026/07/07/neymar-lamenta-eliminacao-do-brasil-para-a-noruega-na-copa-do-mundo-1783395095571_v2_900x506.jpg',      // Neymar Camisa 10 (Mítica)
@@ -226,10 +226,10 @@ const CARDS=[
   {id:'santos09',nome:'Neymar Santos 2009',clube:'SANTOS',over:89,raridade:'Raro',rar:'raro',chance:4.3,a:'#6b7280',b:'#0f172a',img:FOTOS.santos09},
   {id:'santos12',nome:'Neymar Santos 2012',clube:'SANTOS',over:105,raridade:'Mítico',rar:'mitica',chance:4.3,a:'#6b7280',b:'#0f172a',img:FOTOS.santos12},
   {id:'santos13',nome:'Neymar Santos 2013',clube:'SANTOS',over:100,raridade:'Léndario',rar:'lendario',chance:4.3,a:'#6b7280',b:'#0f172a',img:FOTOS.santos13},
-  {id:'santos26',nome:'Neymar Santos 2025',clube:'SANTOS',over:90,raridade:'Raro',rar:'raro',chance:4.3,a:'#6b7280',b:'#0f172a',img:FOTOS.santos25},
+  {id:'santos26',nome:'Neymar Santos 2026',clube:'SANTOS',over:90,raridade:'Raro',rar:'raro',chance:4.3,a:'#6b7280',b:'#0f172a',img:FOTOS.santos26},
   {id:'selecao18',nome:'Neymar Seleção 2018',clube:'SELEÇÃO',over:100,raridade:'Épico',rar:'epico',chance:4.3,a:'#009c3b',b:'#002776',img:FOTOS.selecao18},
   {id:'selecao13',nome:'Neymar Seleção 2013',clube:'SELEÇÃO',over:105,raridade:'Mítico',rar:'mitica',chance:4.3,a:'#009c3b',b:'#002776',img:FOTOS.selecao13},
-  {id:'psg2020',nome:'Neymar PSG 2020',clube:'PSG',over:106,raridade:'Secreta',rar:'secreta',chance:4.3,a:'#0a1f5c',b:'#e5112b',img:FOTOS.psg2020},
+  {id:'barcaneyemessi',nome:'Neymar e Messi (2017)',clube:'BARCELONA',over:110,raridade:'Secreta',rar:'secreta',chance:4.3,a:'#0a1f5c',b:'#e5112b',img:FOTOS.barcaneyemessi},
   {id:'psg21',nome:'Neymar PSG 2021',clube:'PSG',over:104,raridade:'Mítico',rar:'mitica',chance:0.75,a:'#0a1f5c',b:'#e5112b',img:FOTOS.psg21},
   {id:'psg23',nome:'Neymar PSG 2023',clube:'PSG',over:99,raridade:'Épico',rar:'epico',chance:4,a:'#0a1f5c',b:'#e5112b',img:FOTOS.psg23},
   // ---- Mítica (1,5%) e Secreta (0,5%) ----
